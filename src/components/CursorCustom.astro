@@ -1,0 +1,33 @@
+---
+
+---
+
+<div id="cursor"></div>
+<style>
+  #cursor {
+    width: 10px;
+    height: 10px;
+    z-index: 999;
+    pointer-events: none;
+    transition: none;
+    position: fixed;
+    background-color: #f472b6;
+    filter: blur(1px);
+    opacity: 0.9;
+    border-radius: 100%;
+    box-shadow:
+      0px 0px 10px #f472b52e,
+      0px 0px 15px #f472b58b,
+      0px 0px 20px #f472b5c5;
+    left: -5px;
+    top: -5px;
+    transform: translate(var(--mouse-x), var(--mouse-y)) translateZ(0);
+  }
+</style>
+<script>
+  let root = document.documentElement;
+  root.addEventListener("mousemove", (e) => {
+    root.style.setProperty("--mouse-x", e.clientX + "px");
+    root.style.setProperty("--mouse-y", e.clientY + "px");
+  });
+</script>

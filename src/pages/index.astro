@@ -1,6 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
+import CursorCustom from "../components/CursorCustom.astro";
 import Footer from "../components/Footer.astro";
 import { SITE_DESCRIPTION, SITE_TITLE_HOME } from "../consts";
 ---
@@ -11,16 +12,17 @@ import { SITE_DESCRIPTION, SITE_TITLE_HOME } from "../consts";
     <BaseHead title={SITE_TITLE_HOME} description={SITE_DESCRIPTION} />
   </head>
   <body>
+    <CursorCustom />
     <Header />
     <main>
       <section class="h-screen flex items-center">
         <div class="w-11/12 mx-auto">
           <div class="text-center">
-            <h1 class="text-pink-400 text-3xl font-semibold animate-jump-in animate-duration-[500ms] animate-ease-out">El camino del aprendizaje</h1>
-            <p class="mt-3 text-neutral-100 animate-fade-up animate-duration-500 animate-delay-[500ms] animate-ease-out">En este blog, te sumergirás en el emocionante mundo del aprendizaje efectivo y el autodidactismo, descubriendo las claves para alcanzar tu máximo potencial.</p>
-            <div class="mt-4 hover:scale-110 duration-500 ease-out delay-100 animate-fade animate-duration-500 animate-delay-[1000ms] animate-ease-out">
+            <h1 class="text-pink-400 text-3xl font-semibold animate-fade-up animate-duration-[500ms] animate-ease-out">1% mejor cada día</h1>
+            <p class="mt-3 text-neutral-100 animate-fade-up animate-duration-500 animate-delay-[100ms] animate-ease-out">En este blog, encontrarás herramientas para el aprendizaje efectivo y el autodidactismo, descubriendo las claves para alcanzar tu máximo potencial.</p>
+            <div class="mt-4 hover:scale-110 duration-500 ease-out delay-100 animate-fade-up animate-duration-500 animate-delay-[150ms] animate-ease-out">
               <a href="/blog" class="">
-                <button class="px-3 py-1 w-fit font-semibold text-white hover:text-pink-400 border border-pink-400 bg-pink-400 hover:bg-transparent rounded-lg transition duration-100 ease-out">Comenzar</button>
+                <button class="px-3 py-1 w-fit font-semibold text-pink-400 hover:text-white border border-pink-400 bg-transparent hover:bg-pink-400 rounded-lg hover:scale-110 transition duration-300 ease-out">Comenzar</button>
               </a>
             </div>
           </div>
@@ -28,13 +30,49 @@ import { SITE_DESCRIPTION, SITE_TITLE_HOME } from "../consts";
       </section>
       <section class="w-11/12 mx-auto">
         <div class="flex justify-center w-full">
-          <div class="p-5 mt-9 text-center md:text-left rounded-2xl bg-neutral-900">
-            <p class="text-xl font-semibold mb-5 -mt-9 pb-2 border-2 border-transparent border-b-pink-400">Colaboradores</p>
-            <div class="w-full grid md:grid-cols-2 gap-4">
+          <div class="p-5 mt-9 text-center md:text-left rounded-2xl bg-neutral-900 group">
+            <p class="text-xl group-hover:text-2xl font-semibold mb-5 -mt-9 pb-2 border-b-2  border-b-pink-400 duration-300 ease-out">Colaboradores</p>
+            <div class="w-full h-96 overflow-y-auto grid md:grid-cols-1 lg:grid-cols-2 gap-4 flex-wrap">
               <!-- ////////////////////// -->
               <div class="md:flex md:flex-row w-full p-1 md:p-5 mb-5 m-auto rounded-2xl bg-transparent backdrop-blur-lg border-0 hover:border-b-4 border-pink-400 duration-300 ease-in-out hover:-translate-y-1">
-                <div class="mx-auto my-auto flex w-36 items-center justify-center md:w-96">
-                  <img src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20%2810%29.jpg" class="rounded-2xl grayscale hover:grayscale-0 duration-300" alt="Avatar" /> 
+                <div class="mx-auto my-auto flex w-36 items-center justify-center md:w-96 bg-cover">
+                  <img src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20%2810%29.jpg" class="rounded-2xl grayscale group-hover:grayscale-0 duration-300" alt="Avatar" /> 
+                </div>
+                <div class="m-auto w-full ml-0 md:ml-5"> 
+                  <p class="mb-2 mt-3 md:mt-0 text-xl font-semibold text-neutral-300">Anna Smith</p>
+                  <p class="mb-0 font-light text-neutral-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                  <p class="mt-1 md:mt-0 text-base font-bold text-neutral-500">lorem</p>
+                </div>
+              </div>
+              <!-- ////////////////////// -->
+              <!-- ////////////////////// -->
+              <div class="md:flex md:flex-row w-full p-1 md:p-5 mb-5 m-auto rounded-2xl bg-transparent backdrop-blur-lg border-0 hover:border-b-4 border-pink-400 duration-300 ease-in-out hover:-translate-y-1">
+                <div class="mx-auto my-auto flex w-36 items-center justify-center md:w-96 bg-cover">
+                  <img src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20%2810%29.jpg" class="rounded-2xl grayscale group-hover:grayscale-0 duration-300" alt="Avatar" /> 
+                </div>
+                <div class="m-auto w-full ml-0 md:ml-5"> 
+                  <p class="mb-2 mt-3 md:mt-0 text-xl font-semibold text-neutral-300">Anna Smith</p>
+                  <p class="mb-0 font-light text-neutral-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                  <p class="mt-1 md:mt-0 text-base font-bold text-neutral-500">lorem</p>
+                </div>
+              </div>
+              <!-- ////////////////////// -->
+              <!-- ////////////////////// -->
+              <div class="md:flex md:flex-row w-full p-1 md:p-5 mb-5 m-auto rounded-2xl bg-transparent backdrop-blur-lg border-0 hover:border-b-4 border-pink-400 duration-300 ease-in-out hover:-translate-y-1">
+                <div class="mx-auto my-auto flex w-36 items-center justify-center md:w-96 bg-cover">
+                  <img src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20%2810%29.jpg" class="rounded-2xl grayscale group-hover:grayscale-0 duration-300" alt="Avatar" /> 
+                </div>
+                <div class="m-auto w-full ml-0 md:ml-5"> 
+                  <p class="mb-2 mt-3 md:mt-0 text-xl font-semibold text-neutral-300">Anna Smith</p>
+                  <p class="mb-0 font-light text-neutral-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                  <p class="mt-1 md:mt-0 text-base font-bold text-neutral-500">lorem</p>
+                </div>
+              </div>
+              <!-- ////////////////////// -->
+              <!-- ////////////////////// -->
+              <div class="md:flex md:flex-row w-full p-1 md:p-5 mb-5 m-auto rounded-2xl bg-transparent backdrop-blur-lg border-0 hover:border-b-4 border-pink-400 duration-300 ease-in-out hover:-translate-y-1">
+                <div class="mx-auto my-auto flex w-36 items-center justify-center md:w-96 bg-cover">
+                  <img src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20%2810%29.jpg" class="rounded-2xl grayscale group-hover:grayscale-0 duration-300" alt="Avatar" /> 
                 </div>
                 <div class="m-auto w-full ml-0 md:ml-5"> 
                   <p class="mb-2 mt-3 md:mt-0 text-xl font-semibold text-neutral-300">Anna Smith</p>

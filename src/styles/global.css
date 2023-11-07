@@ -5,16 +5,19 @@
 	--gray: #171717;
 	--gray-light: #d4d4d4;
 	--code: #1e2127;
-  }
-  ::-webkit-scrollbar {
+}
+
+::-webkit-scrollbar {
 	width: 0;
-  }
-  html {
+}
+
+html {
 	background-color: var(--black);
 	overflow-x: hidden;
 	scroll-behavior: smooth;
-  }
-  body {
+}
+
+body {
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	margin: 0;
 	padding: 0;
@@ -22,53 +25,78 @@
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: var(--gray-light);
-  }
-  main {
+	cursor: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+	cursor: none;
+}
+
+button:hover,
+button:focus,
+button:active {
+	cursor: none;
+}
+
+main {
 	width: 90%;
 	height: fit-content;
 	margin: auto;
-  }
-  a {
+}
+
+a {
 	color: var(--pink);
 	transition: color 0.3s ease;
-  }
-  a:hover {
+}
+
+a:hover {
 	color: var(--pink);
-  }
-  textarea {
+}
+
+textarea {
 	width: 100%;
 	font-size: 16px;
-  }
-  input {
+}
+
+input {
 	font-size: 16px;
-  }
-  table {
+}
+
+table {
 	width: 100%;
-  }
-  img {
+}
+
+img {
 	max-width: 100%;
 	height: auto;
 	border-radius: 8px;
-  }
-  code {
+}
+
+code {
 	padding: 2px 5px;
 	background-color: var(--code);
 	border-radius: 2px;
-  }
-  pre {
+}
+
+pre {
 	padding: 1.5em;
 	border-radius: 8px;
-  }
-  pre>code {
+}
+
+pre>code {
 	all: unset;
-  }
-  blockquote {
+}
+
+blockquote {
 	border-left: 4px solid var(--pink);
 	padding: 0 0 0 20px;
 	margin: 0px;
 	font-size: 1.333em;
-  }
-  hr {
+}
+
+hr {
 	border: none;
 	border-top: 1px solid var(--pink);
-  }
+}
