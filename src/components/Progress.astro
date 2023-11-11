@@ -1,3 +1,58 @@
 ---
+progressValue: 0;
 ---
-<progress max="100" value="0"></progress>
+
+<script>
+  // Función que actualiza el valor de progreso basado en el desplazamiento de la página
+  const updateProgress = () => {
+    // Altura visible de la ventana del navegador
+    const windowHeight = window.innerHeight;
+    // Altura total del documento (incluido el contenido fuera de la ventana)
+    const documentHeight = document.documentElement.scrollHeight - windowHeight;
+    // Desplazamiento actual desde la parte superior de la página
+    const scrollTop = window.scrollY;
+    // Porcentaje de desplazamiento en relación con la altura total del documento
+    const scrollPercentage = (scrollTop / documentHeight) * 100;
+    // Valor de progreso limitado entre 0 y 100
+    const progressValue = Math.min(100, Math.max(0, scrollPercentage));
+    // Establecer la variable CSS --progressValue con el valor calculado
+    document.documentElement.style.setProperty(
+      "--progressValue",
+      `${progressValue}%`
+    );
+  };
+  // Uso de la reactividad de Astro ($:) para agregar un event listener al evento de scroll
+  $: {
+    window.addEventListener("scroll", updateProgress);
+  }
+  // Event listener para llamar a updateProgress cuando la página se carga completamente
+  window.addEventListener("load", updateProgress);
+</script>
+
+<style>
+  .progress {
+    z-index: 10;
+    position: fixed;
+    top: 62px;
+    left: 4px;
+    width: calc(100% - 8px);
+    height: 4px;
+    border: transparent;
+    border-radius: 100%;
+    background: transparent;
+    appearance: none;
+    border-radius: 10px;
+  }
+
+  .progress-bar {
+    background-color: #f472b6;
+    border-radius: 10px;
+    width: var(--progressValue);
+    height: 4px;
+    transition: width 0.1s ease;
+  }
+</style>
+
+<div class="progress">
+  <div class="progress-bar"></div>
+</div>

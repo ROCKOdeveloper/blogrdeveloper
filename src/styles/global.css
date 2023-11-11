@@ -40,6 +40,11 @@ button:active {
 	cursor: none;
 }
 
+::selection {
+  background-color: #f472b6;
+  color: #ffffff;
+}
+
 main {
 	width: 90%;
 	height: fit-content;
