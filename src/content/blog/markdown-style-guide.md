@@ -1,15 +1,44 @@
 ---
-title: 'Markdown Style Guide'
-description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
-pubDate: 'Jul 01 2022'
-heroImage: '../public/img/placeholder/ThisIsMe.jpeg'
+title: 'Introducción a Markdown'
+description: 'Este documento está diseñado para ayudarte a dominar la creación de contenido estructurado y legible utilizando Markdown'
+pubDate: 'Nov 02 2022'
+heroImage: 'https://www.markdownguide.org/assets/images/markdown-mark-white.svg'
 ---
 
-Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.
+Este documento está diseñado para ayudarte a dominar la creación de contenido estructurado y legible utilizando Markdown. Ya sea que estés escribiendo documentos, blogs, o mensajes en línea, Markdown ofrece una sintaxis sencilla y eficaz para formatear tu texto.
 
-## Headings
+<br>
 
-The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
+Esta guía abarca desde los fundamentos, como encabezados y párrafos, hasta elementos más avanzados, como tablas y bloques de código. Todo con ejemplos en código y su respectivo resultado.
+
+<br>
+
+## **Encabezados**
+
+Los siguientes elementos HTML `<h1>`—`<h6>` representan seis niveles de encabezados de sección. `<h1>` es el nivel más alto, mientras que `<h6>` es el más bajo.
+
+<br>
+
+```markdown
+# H1
+
+## H2
+
+### H3
+
+#### H4
+
+##### H5
+
+###### H6
+
+```
+
+<br>
+
+## **Salida**
+
+<br>
 
 # H1
 
@@ -23,61 +52,71 @@ The following HTML `<h1>`—`<h6>` elements represent six levels of section head
 
 ###### H6
 
-## Paragraph
+<br>
 
-Xerum, quo qui aut unt expliquam qui dolut labo. Aque venitatiusda cum, voluptionse latur sitiae dolessi aut parist aut dollo enim qui voluptate ma dolestendit peritin re plis aut quas inctum laceat est volestemque commosa as cus endigna tectur, offic to cor sequas etum rerum idem sintibus eiur? Quianimin porecus evelectur, cum que nis nust voloribus ratem aut omnimi, sitatur? Quiatem. Nam, omnis sum am facea corem alique molestrunt et eos evelece arcillit ut aut eos eos nus, sin conecerem erum fuga. Ri oditatquam, ad quibus unda veliamenimin cusam et facea ipsamus es exerum sitate dolores editium rerore eost, temped molorro ratiae volorro te reribus dolorer sperchicium faceata tiustia prat.
+---
 
-Itatur? Quiatae cullecum rem ent aut odis in re eossequodi nonsequ idebis ne sapicia is sinveli squiatum, core et que aut hariosam ex eat.
+## **Párrafos**
 
-## Images
+La creación de párrafos es tan sencilla como escribir texto en líneas consecutivas. Simplemente, deja una línea en blanco entre dos bloques de texto para separarlos en párrafos distintos.
 
-#### Syntax
-
-```markdown
-![Alt text](./full/or/relative/path/of/image)
-```
-
-#### Output
-
-![blog placeholder](/blog-placeholder-about.jpg)
-
-## Blockquotes
-
-The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a `footer` or `cite` element, and optionally with in-line changes such as annotations and abbreviations.
-
-### Blockquote without attribution
-
-#### Syntax
+<br>
 
 ```markdown
-> Tiam, ad mint andaepu dandae nostion secatur sequo quae.  
-> **Note** that you can use _Markdown syntax_ within a blockquote.
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero veritatis modi neque distinctio tempore! Esse numquam, sunt, dignissimos perferendis alias, harum inventore mollitia blanditiis necessitatibus ad consequuntur corporis sed qui.
 ```
 
-#### Output
+<br>
 
-> Tiam, ad mint andaepu dandae nostion secatur sequo quae.  
-> **Note** that you can use _Markdown syntax_ within a blockquote.
+## **Salida**
 
-### Blockquote with attribution
+Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero veritatis modi neque distinctio tempore! Esse numquam, sunt, dignissimos perferendis alias, harum inventore mollitia blanditiis necessitatibus ad consequuntur corporis sed qui.
 
-#### Syntax
+<br>
+
+## **Imagenes**
+
+En Markdown, insertar imágenes es un proceso simple y directo. Utiliza la siguiente sintaxis para agregar una imagen:
+
+<br>
 
 ```markdown
-> Don't communicate by sharing memory, share memory by communicating.<br>
-> — <cite>Rob Pike[^1]</cite>
+![Texto alternativo](./ruta/de/la/imagen.jpg)
 ```
 
-#### Output
+<br>
 
-> Don't communicate by sharing memory, share memory by communicating.<br>
-> — <cite>Rob Pike[^1]</cite>
+## **Salida**
 
-[^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
+![Alt text](../../../public/img/placeholder/ThisIsMe.jpeg)
 
-## Tables
+<br>
 
-#### Syntax
+## **Citas en bloque**
+
+<br>
+
+Citas en bloque representa contenido citado de otra fuente. Para agregar una citación en bloque, utiliza la siguiente sintaxis:
+
+<br>
+
+```markdown
+> Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+```
+
+<br>
+
+## **Salida**
+
+> Lorem ipsum dolor, sit amet consectetur adipisicing elit.  
+
+<br>
+
+## **Tablas**
+
+En Markdown, las tablas son fáciles de crear utilizando una combinación de barras verticales `|` y guiones `-`. Utiliza la siguiente sintaxis para agregar una tabla:
+
+<br>
 
 ```markdown
 | Italics   | Bold     | Code   |
@@ -85,17 +124,22 @@ The blockquote element represents content that is quoted from another source, op
 | _italics_ | **bold** | `code` |
 ```
 
-#### Output
+<br>
+
+## **Salida**
 
 | Italics   | Bold     | Code   |
 | --------- | -------- | ------ |
 | _italics_ | **bold** | `code` |
 
-## Code Blocks
+<br>
 
-#### Syntax
+## **Bloque de codigo**
 
-we can use 3 backticks ``` in new line and write snippet and close with 3 backticks on new line and to highlight language specific syntac, write one word of language name after first 3 backticks, for eg. html, javascript, css, markdown, typescript, txt, bash
+En Markdown, puedes resaltar bloques de código de manera simple y efectiva.
+Usar 3 acentos graves ` ``` ` en una nueva línea, escribir el fragmento y cerrar con 3 acentos graves en una nueva línea. Para resaltar la sintaxis específica del lenguaje, escribe una palabra del nombre del lenguaje después de los primeros 3 acentos graves, por ejemplo, html, javascript, css, markdown, typescript, txt, bash.
+
+<br>
 
 ````markdown
 ```html
@@ -112,7 +156,9 @@ we can use 3 backticks ``` in new line and write snippet and close with 3 backti
 ```
 ````
 
-Output
+<br>
+
+## **Salida**
 
 ```html
 <!doctype html>
@@ -127,11 +173,13 @@ Output
 </html>
 ```
 
-## List Types
+<br>
 
-### Ordered List
+## **Tipos de listas**
 
-#### Syntax
+<br>
+
+listas ordendas
 
 ```markdown
 1. First item
@@ -139,76 +187,39 @@ Output
 3. Third item
 ```
 
-#### Output
+<br>
 
+Lista desordenada
+
+```markdown
+- List item
+- Another item
+- And another item
+```
+
+<br>
+
+listas anidadas
+
+```markdown
 1. First item
+  - First subitem
+  - Second subitem
+  - Third subitem
 2. Second item
 3. Third item
-
-### Unordered List
-
-#### Syntax
-
-```markdown
-- List item
-- Another item
-- And another item
 ```
 
-#### Output
+<br>
 
-- List item
-- Another item
-- And another item
+## **Línea horizontal**
 
-### Nested list
+Para hacer una discreta división entre elementos, usa una línea horizontal ` --- `.
 
-#### Syntax
+<br>
 
-```markdown
-- Fruit
-  - Apple
-  - Orange
-  - Banana
-- Dairy
-  - Milk
-  - Cheese
+``` markdown
+---
 ```
 
-#### Output
-
-- Fruit
-  - Apple
-  - Orange
-  - Banana
-- Dairy
-  - Milk
-  - Cheese
-
-## Other Elements — abbr, sub, sup, kbd, mark
-
-#### Syntax
-
-```markdown
-<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
-
-H<sub>2</sub>O
-
-X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
-
-Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
-
-Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
-```
-
-#### Output
-
-<abbr title="Graphics Interchange Format">GIF</abbr> is a bitmap image format.
-
-H<sub>2</sub>O
-
-X<sup>n</sup> + Y<sup>n</sup> = Z<sup>n</sup>
-
-Press <kbd><kbd>CTRL</kbd>+<kbd>ALT</kbd>+<kbd>Delete</kbd></kbd> to end the session.
-
-Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and other small creatures.
+(en desarrollo)

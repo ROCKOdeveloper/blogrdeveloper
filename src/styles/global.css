@@ -4,11 +4,15 @@
 	--pink: #f472b6;
 	--gray: #171717;
 	--gray-light: #d4d4d4;
-	--code: #1e2127;
 }
 
 ::-webkit-scrollbar {
 	width: 0;
+	background-color: var(--gray);
+}
+
+-webkit-scrollbar-thumb {
+	background-color: var(--pink);
 }
 
 html {
@@ -81,7 +85,7 @@ img {
 
 code {
 	padding: 2px 5px;
-	background-color: var(--code);
+	background-color: var(--gray);
 	border-radius: 2px;
 }
 
@@ -95,7 +99,7 @@ pre>code {
 }
 
 blockquote {
-	border-left: 4px solid var(--pink);
+	border-left: 2px solid var(--pink);
 	padding: 0 0 0 20px;
 	margin: 0px;
 	font-size: 1.333em;

@@ -1,20 +1,31 @@
 ---
+// Importar las funciones y componentes necesarios
 import { type CollectionEntry, getCollection } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
 
+// Definir una función asíncrona para obtener las rutas estáticas de las publicaciones del blog
 export async function getStaticPaths() {
-	const posts = await getCollection('blog');
-	return posts.map((post) => ({
-		params: { slug: post.slug },
-		props: post,
-	}));
+		// Obtener la colección de publicaciones del blog
+		const posts = await getCollection('blog');
+		
+		// Mapear cada publicación del blog a un objeto de ruta estática
+		return posts.map((post) => ({
+				params: { slug: post.slug },
+				props: post,
+		}));
 }
+
+// Definir el tipo Props basado en el tipo CollectionEntry para la colección 'blog'
 type Props = CollectionEntry<'blog'>;
 
+// Asignar el objeto Astro.props a la variable post
 const post = Astro.props;
+
+// Renderizar el contenido de la publicación usando el componente 'Content' del objeto post
 const { Content } = await post.render();
 ---
 
+<!-- Renderizar el componente BlogPost con los datos del objeto post y el contenido renderizado -->
 <BlogPost {...post.data}>
-	<Content />
+		<Content />
 </BlogPost>
