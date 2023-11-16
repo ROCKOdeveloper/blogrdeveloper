@@ -86,9 +86,6 @@ En Markdown, insertar imágenes es un proceso simple y directo. Utiliza la sigui
 
 <br>
 
-## **Salida**
-
-![Alt text](../../../public/img/placeholder/ThisIsMe.jpeg)
 
 <br>
 
