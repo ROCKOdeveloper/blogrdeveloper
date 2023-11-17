@@ -2,7 +2,7 @@
 title: 'Introducción a Markdown'
 description: 'Este documento está diseñado para ayudarte a dominar la creación de contenido estructurado y legible utilizando Markdown'
 pubDate: 'Nov 02 2022'
-heroImage: 'https://www.markdownguide.org/assets/images/markdown-mark-white.svg'
+heroImage: 'https://www.markdownguide.org/assets/images/markdown-guide-og.jpg'
 ---
 
 Este documento está diseñado para ayudarte a dominar la creación de contenido estructurado y legible utilizando Markdown. Ya sea que estés escribiendo documentos, blogs, o mensajes en línea, Markdown ofrece una sintaxis sencilla y eficaz para formatear tu texto.

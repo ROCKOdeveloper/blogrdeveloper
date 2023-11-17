@@ -6,21 +6,6 @@ npm create astro@latest -- --template blog
 
 ![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
 
-## Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-- public/
-- src/
-  - components/
-  - content/
-  - layouts/
-  - pages/
-- astro.config.mjs
-- README.md
-- package.json
-- tsconfig.json
-
 ## Commands
 
 All commands are run from the root of the project, from a terminal:
@@ -34,6 +19,6 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## Want to learn more?
+### Want to learn more?
 
 Check out [our documentation](https://docs.astro.build)
