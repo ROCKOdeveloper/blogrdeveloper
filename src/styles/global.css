@@ -84,7 +84,7 @@ img {
 }
 
 code {
-	padding: 2px 5px;
+	padding: 5px;
 	background-color: var(--gray);
 	border-radius: 2px;
 }
@@ -100,9 +100,9 @@ pre>code {
 
 blockquote {
 	border-left: 2px solid var(--pink);
-	padding: 0 0 0 20px;
-	margin: 0px;
-	font-size: 1.333em;
+	padding-left: 20px;
+	font-size: 0.9rem;
+	font-family: 'Courier New', Courier, monospace;
 }
 
 hr {
