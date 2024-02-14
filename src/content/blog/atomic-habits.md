@@ -1,7 +1,7 @@
 ---
 title: 'El poder de los Habitos atómicos'
 description: 'Este es lo que aprendí de este maravilloso libro. Ojalá lo hubiera leído antes.'
-pubDate: 'Nov 22 2022'
+pubDate: 'Nov 22 2023'
 heroImage: 'https://latiendadelcafe.co/cdn/shop/products/habitos-atomicos_1296x.jpg?v=1642717558'
 ---
 
