@@ -1,31 +1,31 @@
 ---
-// Importar las funciones y componentes necesarios
-import { type CollectionEntry, getCollection } from 'astro:content';
-import BlogPost from '../../layouts/BlogPost.astro';
+import { render } from 'astro:content';
+import Post from '../../layouts/Post.astro';
+import { getPosts, type Post as PostEntry } from '../../lib/blog';
+import { lastEditDate } from '../../lib/git-dates';
+import { editedDate, seriesNeighbors } from '../../lib/posts';
 
-// Definir una función asíncrona para obtener las rutas estáticas de las publicaciones del blog
 export async function getStaticPaths() {
-		// Obtener la colección de publicaciones del blog
-		const posts = await getCollection('blog');
-		
-		// Mapear cada publicación del blog a un objeto de ruta estática
-		return posts.map((post) => ({
-				params: { slug: post.slug },
-				props: post,
-		}));
+  const posts = await getPosts();
+  return posts.map((post) => {
+    // Anterior y siguiente solo dentro de un mini curso; fuera de él no hay continuidad.
+    const neighbors = seriesNeighbors(post, posts);
+    const edited = editedDate(post.data.pubDate, post.data.updatedDate, lastEditDate(post.filePath));
+    return { params: { slug: post.id }, props: { post, edited, ...neighbors } };
+  });
 }
 
-// Definir el tipo Props basado en el tipo CollectionEntry para la colección 'blog'
-type Props = CollectionEntry<'blog'>;
+interface Props {
+  post: PostEntry;
+  edited?: Date;
+  previous?: PostEntry;
+  next?: PostEntry;
+}
 
-// Asignar el objeto Astro.props a la variable post
-const post = Astro.props;
-
-// Renderizar el contenido de la publicación usando el componente 'Content' del objeto post
-const { Content } = await post.render();
+const { post, edited, previous, next } = Astro.props;
+const { Content } = await render(post);
 ---
 
-<!-- Renderizar el componente BlogPost con los datos del objeto post y el contenido renderizado -->
-<BlogPost {...post.data}>
-		<Content />
-</BlogPost>
+<Post post={post} edited={edited} previous={previous} next={next}>
+  <Content />
+</Post>
